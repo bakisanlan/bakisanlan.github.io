@@ -2,10 +2,431 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My GitHub Pages Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulbaki Sanlan | Aerospace Researcher</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- Global Variables & Reset --- */
+        :root {
+            --primary-color: #004f90; /* Your CV Color */
+            --text-dark: #2c3e50;
+            --text-light: #5a6b7c;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --border-color: #e1e4e8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: 0.3s;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #003366;
+        }
+
+        /* --- Layout Container --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--white);
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+        }
+
+        /* --- Header / Hero --- */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .contact-info i {
+            color: var(--text-dark);
+            margin-right: 5px;
+        }
+
+        /* --- Sections --- */
+        section {
+            padding: 30px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Content Blocks --- */
+        .job-block, .edu-block, .project-block, .pub-block {
+            margin-bottom: 25px;
+        }
+
+        .block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+
+        .role {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .date {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .company {
+            font-style: italic;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: var(--text-light);
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* --- Skills & Tags --- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-category {
+            margin-bottom: 15px;
+        }
+
+        .skill-tag {
+            background: #eef2f7;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            border: 1px solid #dbe2e8;
+        }
+
+        /* --- Projects Grid --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            background: var(--bg-light);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 600px) {
+            .block-header {
+                flex-direction: column;
+            }
+            h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World! My website is live.</h1>
-    <p>This page is hosted using GitHub Pages.</p>
+
+<div class="container">
+
+    <header>
+        <h1>Abdulbaki Sanlan</h1>
+        <div class="contact-info">
+            <span><i class="fas fa-map-marker-alt"></i> Istanbul, Turkey</span>
+            <span><i class="fas fa-envelope"></i> <a href="mailto:sanlan19@itu.edu.tr">sanlan19@itu.edu.tr</a></span>
+            <span><i class="fas fa-phone"></i> +90 505 693 4357</span>
+            <span><i class="fab fa-github"></i> <a href="https://github.com/bakisanlan">bakisanlan</a></span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Summary</h2>
+        <p>Currently pursuing a PhD in Aerospace Engineering at Istanbul Technical University and conducting research at the ITU Aerospace Research Center. Experienced in the design and implementation of advanced GNC algorithms for aerospace applications, with a strong focus on developing and applying novel approaches to improve the autonomy, precision, and robustness of aerial systems.</p>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="edu-block">
+            <div class="block-header">
+                <span class="role">M.Sc. in Aerospace Engineering</span>
+                <span class="date">2024 -- 2025</span>
+            </div>
+            <span class="company">Istanbul Technical University</span>
+            <p>GPA: 3.78/4.00</p>
+        </div>
+
+        <div class="edu-block">
+            <div class="block-header">
+                <span class="role">B.Sc. in Aeronautical Engineering</span>
+                <span class="date">2019 -- 2024</span>
+            </div>
+            <span class="company">Istanbul Technical University</span>
+            <p>GPA: 3.36/4.00</p>
+        </div>
+
+        <div class="edu-block">
+            <div class="block-header">
+                <span class="role">High School</span>
+                <span class="date">2016 -- 2019</span>
+            </div>
+            <span class="company">Ergun Oner Mehmet Oner Anadolu Lisesi</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        
+        <div class="job-block">
+            <div class="block-header">
+                <span class="role">Researcher</span>
+                <span class="date">Nov 2023 -- Present</span>
+            </div>
+            <span class="company">ITU Aerospace Research Center</span>
+            <ul>
+                <li><strong>GPS/GNSS Denied Navigation:</strong>
+                    <ul>
+                        <li>Implemented a <strong>terrain-matching solution</strong> for 6-DOF aircraft state estimation by fusing INS data and point-cloud measurements through UKF and Particle Filter.</li>
+                        <li>Developed a <strong>visual navigation-based UAV positioning pipeline</strong> integrating VIO with Generative AI–enabled domain adaptation of satellite imagery.</li>
+                    </ul>
+                </li>
+                <li><strong>Anti-Skid Braking System Design:</strong>
+                    <ul>
+                        <li>Developed an <strong>optimal friction curve estimation</strong> model using PSO, integrating a hybrid approach with a Sliding Mode Estimator.</li>
+                        <li>Conducted research on <strong>effective radius estimation</strong> for systems operating under measurement-deficient conditions.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <div class="block-header">
+                <span class="role">Engineer Intern</span>
+                <span class="date">Jul 2023 -- Sep 2023</span>
+            </div>
+            <span class="company">Baykar Teknoloji</span>
+            <ul>
+                <li>Worked on swarm UAV formation flight algorithms based on Artificial Potential Field.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <div class="block-header">
+                <span class="role">Engineer Intern</span>
+                <span class="date">Oct 2022 -- Mar 2023</span>
+            </div>
+            <span class="company">TUSAŞ (Turkish Aerospace Industries)</span>
+            <ul>
+                <li>Assisted in trim and linearization for a 6-DOF Aircraft model.</li>
+                <li>Learned visualization of aircraft model on Simulink/Flight Gear.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Publications</h2>
+        
+        <div class="pub-block">
+            <p>
+                <a href="https://doi.org/10.1109/ICNS65417.2025.10976891">
+                    <strong>"Particle Filter-Based Localization Using Visual Feature Synchronization in GNSS-Denied Navigation"</strong>
+                </a><br>
+                A.B. Sanlan, H. T. Bagci, E. Koyuncu<br>
+                <em>The 25th Integrated Communications, Navigation and Surveillance Conference, Brussels (2025)</em>
+            </p>
+        </div>
+
+        <div class="pub-block">
+            <p>
+                <a href="https://arxiv.org/abs/2510.06470">
+                    <strong>"Terrain-Aided Navigation Using a Point Cloud Measurement Sensor"</strong>
+                </a><br>
+                A.B. Sanlan, F. Erol, M. Abu-Khalaf, E. Koyuncu<br>
+                <em>arXiv e-prints, abs/2510.06470 (2025)</em>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills & Languages</h2>
+        <div class="skill-category">
+            <strong>Advanced:</strong> Python, MATLAB, LaTeX
+        </div>
+        <div class="skill-category">
+            <strong>Intermediate:</strong> ROS, Simulink, Git, C++
+        </div>
+        <div class="skill-category">
+            <strong>Languages:</strong> English (B2, IELTS 7/9), Turkish (Native)
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <span class="project-title">CycleGAN Generative Model</span>
+                <p>Designed and trained a CycleGAN-based generative model for image-to-image translation to minimize domain discrepancies across diverse datasets.</p>
+            </div>
+            <div class="project-card">
+                <span class="project-title">Audio Species ID</span>
+                <p>Developed a deep learning pipeline for automated species identification using audio recordings and signal processing.</p>
+            </div>
+            <div class="project-card">
+                <span class="project-title">Segment Anything (SAM)</span>
+                <p>Implemented a grounded image-classification framework built on SAM to enhance segmentation precision.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-title">Optimal Control Trajectory</span>
+                <p>Computed fuel/time-optimal trajectories using single shooting, multiple shooting, and direct collocation methods.</p>
+            </div>
+            <div class="project-card">
+                <span class="project-title">Reinforcement Learning</span>
+                <p>Implemented RL for obstacle avoidance and optimal path planning for commercial aircraft in 2D environments.</p>
+            </div>
+            <div class="project-card">
+                <span class="project-title">Dynamic Programming Combat</span>
+                <p>Modeled 1v1 3D air combat scenarios and developed sub-optimal dogfighting algorithms using Approximate Dynamic Programming.</p>
+            </div>
+            <div class="project-card">
+                <span class="project-title">F-16 LQR/LQI Control</span>
+                <p>Designed controllers for the F-16 model (Aerobench-vv) using MATLAB/Simulink.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Volunteer Experience</h2>
+        <div class="job-block">
+            <div class="block-header">
+                <span class="role">Software Team Lead (ITU SKY)</span>
+                <span class="date">Sep 2022 - Apr 2024</span>
+            </div>
+            <ul>
+                <li>Developed mission planning and object detection tracking, designing custom PID controllers for TEKNOFEST-2024.</li>
+            </ul>
+        </div>
+        <div class="job-block">
+            <div class="block-header">
+                <span class="role">Organizational Coordinator (SAHA EXPO)</span>
+                <span class="date">Sep 2022</span>
+            </div>
+            <ul>
+                <li>Coordinated field setup for national and international exhibitors under ITU Dean’s Office.</li>
+            </ul>
+        </div>
+        <div class="job-block">
+            <div class="block-header">
+                <span class="role">Participant (Work & Travel USA)</span>
+                <span class="date">Jun 2022 - Sep 2022</span>
+            </div>
+            <ul>
+                <li>Engaged in a three-month cultural exchange program in Virginia Beach, VA.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+        <ul>
+            <li>Python Advanced Programming (Udemy), Jan 2022</li>
+            <li>Exercising Leadership: Foundational Principles (edX), Apr 2022</li>
+            <li>PLM Education Certificate (TUSAŞ), May 2022</li>
+            <li>Python for Data Science & ML (Udemy), Aug 2022</li>
+            <li>Practical AI with Python & RL (Udemy), Sep 2022</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>Hobbies</h2>
+        <p>Soccer, Computer Games, Reading Recent Aerospace Research</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Abdulbaki Sanlan. Hosted on GitHub Pages.</p>
+    </footer>
+
+</div>
+
 </body>
 </html>
