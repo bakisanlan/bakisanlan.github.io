@@ -96,6 +96,32 @@
             margin-right: 5px;
         }
 
+        /* Download Button Style */
+        .btn-download {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,79,144, 0.2);
+        }
+
+        .btn-download:hover {
+            background-color: #003366;
+            color: var(--white);
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,79,144, 0.3);
+        }
+
+        .btn-download i {
+            margin-right: 8px;
+        }
+
         /* --- Sections --- */
         section {
             padding: 40px 30px;
@@ -255,12 +281,39 @@
             <span><i class="fas fa-phone"></i> +90 505 693 4357</span>
             <span><i class="fab fa-github"></i> <a href="https://github.com/bakisanlan">bakisanlan</a></span>
         </div>
+
+        <!-- DOWNLOAD CV BUTTON -->
+        <a href="cv.pdf" class="btn-download" download>
+            <i class="fas fa-file-pdf"></i> Download CV
+        </a>
     </header>
 
     <!-- SUMMARY -->
     <section>
         <h2>Summary</h2>
         <p>Currently pursuing a PhD in Aerospace Engineering at Istanbul Technical University and conducting research at the ITU Aerospace Research Center. Experienced in the design and implementation of advanced GNC algorithms for aerospace applications, with a strong focus on developing and applying novel approaches to improve the autonomy, precision, and robustness of aerial systems.</p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+        <h2>Education</h2>
+        <div class="edu-block">
+            <div class="block-header">
+                <span class="role">M.Sc. in Aerospace Engineering</span>
+                <span class="date">2024 -- 2025</span>
+            </div>
+            <span class="company">Istanbul Technical University</span>
+            <p>GPA: 3.78/4.00</p>
+        </div>
+
+        <div class="edu-block">
+            <div class="block-header">
+                <span class="role">B.Sc. in Aeronautical Engineering</span>
+                <span class="date">2019 -- 2024</span>
+            </div>
+            <span class="company">Istanbul Technical University</span>
+            <p>GPA: 3.36/4.00</p>
+        </div>
     </section>
 
     <!-- PUBLICATIONS (Video Included) -->
@@ -301,28 +354,6 @@
                 A.B. Sanlan, F. Erol, M. Abu-Khalaf, E. Koyuncu<br>
                 <em>arXiv e-prints, abs/2510.06470 (2025)</em>
             </p>
-        </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section>
-        <h2>Education</h2>
-        <div class="edu-block">
-            <div class="block-header">
-                <span class="role">M.Sc. in Aerospace Engineering</span>
-                <span class="date">2024 -- 2025</span>
-            </div>
-            <span class="company">Istanbul Technical University</span>
-            <p>GPA: 3.78/4.00</p>
-        </div>
-
-        <div class="edu-block">
-            <div class="block-header">
-                <span class="role">B.Sc. in Aeronautical Engineering</span>
-                <span class="date">2019 -- 2024</span>
-            </div>
-            <span class="company">Istanbul Technical University</span>
-            <p>GPA: 3.36/4.00</p>
         </div>
     </section>
 
