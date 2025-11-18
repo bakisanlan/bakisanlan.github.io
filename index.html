@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdulbaki Sanlan | Aerospace Researcher</title>
     
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         /* --- Global Variables & Reset --- */
         :root {
-            --primary-color: #004f90; /* Your CV Color */
+            --primary-color: #004f90; /* Your CV Deep Blue */
             --text-dark: #2c3e50;
             --text-light: #5a6b7c;
             --bg-light: #f8f9fa;
@@ -46,7 +47,7 @@
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0; /* Reset padding for banner effect */
             background: var(--white);
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
             min-height: 100vh;
@@ -55,8 +56,23 @@
         /* --- Header / Hero --- */
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px 40px;
             border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        /* Profile Photo Styles */
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%; /* Makes it round */
+            object-fit: cover; /* Prevents stretching */
+            border: 5px solid var(--white);
+            box-shadow: 0 0 0 3px var(--primary-color), 0 10px 20px rgba(0,0,0,0.1); /* Double border effect */
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         h1 {
@@ -72,6 +88,7 @@
             gap: 20px;
             font-size: 0.95rem;
             color: var(--text-light);
+            margin-top: 15px;
         }
 
         .contact-info i {
@@ -81,7 +98,7 @@
 
         /* --- Sections --- */
         section {
-            padding: 30px 20px;
+            padding: 40px 30px;
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -92,7 +109,7 @@
         h2 {
             font-size: 1.5rem;
             color: var(--text-dark);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             border-left: 5px solid var(--primary-color);
             padding-left: 15px;
             text-transform: uppercase;
@@ -142,23 +159,9 @@
             margin-bottom: 5px;
         }
 
-        /* --- Skills & Tags --- */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
+        /* --- Skills --- */
         .skill-category {
             margin-bottom: 15px;
-        }
-
-        .skill-tag {
-            background: #eef2f7;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            border: 1px solid #dbe2e8;
         }
 
         /* --- Projects Grid --- */
@@ -171,14 +174,15 @@
         .project-card {
             background: #fff;
             border: 1px solid var(--border-color);
-            padding: 15px;
-            border-radius: 5px;
-            transition: transform 0.2s;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .project-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--primary-color);
         }
 
         .project-title {
@@ -186,15 +190,39 @@
             color: var(--primary-color);
             margin-bottom: 10px;
             display: block;
+            font-size: 1.05rem;
+        }
+
+        /* --- Video Container --- */
+        .video-container {
+            margin-top: 15px; 
+            margin-bottom: 10px;
+            position: relative; 
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0; 
+            overflow: hidden; 
+            max-width: 100%; 
+            background: #000; 
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .video-caption {
+            font-size: 0.85rem; 
+            color: #666; 
+            margin-top: 5px; 
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         /* --- Footer --- */
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             font-size: 0.8rem;
             color: var(--text-light);
             background: var(--bg-light);
+            border-top: 1px solid var(--border-color);
         }
 
         /* --- Responsive --- */
@@ -203,6 +231,11 @@
                 flex-direction: column;
             }
             h1 { font-size: 2rem; }
+            .profile-photo {
+                width: 130px;
+                height: 130px;
+            }
+            section { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -210,7 +243,11 @@
 
 <div class="container">
 
+    <!-- HEADER -->
     <header>
+        <!-- PROFILE PHOTO ADDED HERE -->
+        <img src="profile.jpg" alt="Abdulbaki Sanlan" class="profile-photo" onerror="this.style.display='none'">
+        
         <h1>Abdulbaki Sanlan</h1>
         <div class="contact-info">
             <span><i class="fas fa-map-marker-alt"></i> Istanbul, Turkey</span>
@@ -220,11 +257,54 @@
         </div>
     </header>
 
+    <!-- SUMMARY -->
     <section>
         <h2>Summary</h2>
         <p>Currently pursuing a PhD in Aerospace Engineering at Istanbul Technical University and conducting research at the ITU Aerospace Research Center. Experienced in the design and implementation of advanced GNC algorithms for aerospace applications, with a strong focus on developing and applying novel approaches to improve the autonomy, precision, and robustness of aerial systems.</p>
     </section>
 
+    <!-- PUBLICATIONS (Video Included) -->
+    <section>
+        <h2>Publications</h2>
+        
+        <!-- Paper 1 + Video -->
+        <div class="pub-block">
+            <p>
+                <a href="https://doi.org/10.1109/ICNS65417.2025.10976891">
+                    <strong>"Particle Filter-Based Localization Using Visual Feature Synchronization in GNSS-Denied Navigation"</strong>
+                </a><br>
+                A.B. Sanlan, H. T. Bagci, E. Koyuncu<br>
+                <em>The 25th Integrated Communications, Navigation and Surveillance Conference, Brussels (2025)</em>
+            </p>
+
+            <!-- VIDEO EMBED -->
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/54utIw0_R1U" 
+                    title="Research Demo" 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-caption">
+                <em>Video: Flight test results showing domain adaptation performance.</em>
+            </div>
+        </div>
+
+        <!-- Paper 2 -->
+        <div class="pub-block">
+            <p>
+                <a href="https://arxiv.org/abs/2510.06470">
+                    <strong>"Terrain-Aided Navigation Using a Point Cloud Measurement Sensor"</strong>
+                </a><br>
+                A.B. Sanlan, F. Erol, M. Abu-Khalaf, E. Koyuncu<br>
+                <em>arXiv e-prints, abs/2510.06470 (2025)</em>
+            </p>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
     <section>
         <h2>Education</h2>
         <div class="edu-block">
@@ -244,16 +324,9 @@
             <span class="company">Istanbul Technical University</span>
             <p>GPA: 3.36/4.00</p>
         </div>
-
-        <div class="edu-block">
-            <div class="block-header">
-                <span class="role">High School</span>
-                <span class="date">2016 -- 2019</span>
-            </div>
-            <span class="company">Ergun Oner Mehmet Oner Anadolu Lisesi</span>
-        </div>
     </section>
 
+    <!-- PROFESSIONAL EXPERIENCE -->
     <section>
         <h2>Professional Experience</h2>
         
@@ -303,59 +376,11 @@
         </div>
     </section>
 
-    <section>
-        <h2>Publications</h2>
-        
-        <div class="pub-block">
-            <p>
-                <a href="https://doi.org/10.1109/ICNS65417.2025.10976891">
-                    <strong>"Particle Filter-Based Localization Using Visual Feature Synchronization in GNSS-Denied Navigation"</strong>
-                </a><br>
-                A.B. Sanlan, H. T. Bagci, E. Koyuncu<br>
-                <em>The 25th Integrated Communications, Navigation and Surveillance Conference, Brussels (2025)</em>
-            </p>
-
-            <div class="video-container" style="margin-top: 15px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
-            <iframe 
-                src="https://www.youtube.com/embed/54utIw0_R1U" 
-                title="Research Demo" 
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
-            </div>
-            <p style="font-size: 0.85rem; color: #666; margin-top: 5px; text-align: center;">
-                <em>Watch the demonstration of the Particle Filter-Based Localization algorithm.</em>
-            </p>
-        </div>
-
-        <div class="pub-block">
-            <p>
-                <a href="https://arxiv.org/abs/2510.06470">
-                    <strong>"Terrain-Aided Navigation Using a Point Cloud Measurement Sensor"</strong>
-                </a><br>
-                A.B. Sanlan, F. Erol, M. Abu-Khalaf, E. Koyuncu<br>
-                <em>arXiv e-prints, abs/2510.06470 (2025)</em>
-            </p>
-        </div>
-    </section>
-
-    <section>
-        <h2>Skills & Languages</h2>
-        <div class="skill-category">
-            <strong>Advanced:</strong> Python, MATLAB, LaTeX
-        </div>
-        <div class="skill-category">
-            <strong>Intermediate:</strong> ROS, Simulink, Git, C++
-        </div>
-        <div class="skill-category">
-            <strong>Languages:</strong> English (B2, IELTS 7/9), Turkish (Native)
-        </div>
-    </section>
-
+    <!-- PROJECTS -->
     <section>
         <h2>Technical Projects</h2>
         <div class="projects-grid">
+            <!-- Machine Learning Projects -->
             <div class="project-card">
                 <span class="project-title">CycleGAN Generative Model</span>
                 <p>Designed and trained a CycleGAN-based generative model for image-to-image translation to minimize domain discrepancies across diverse datasets.</p>
@@ -369,6 +394,7 @@
                 <p>Implemented a grounded image-classification framework built on SAM to enhance segmentation precision.</p>
             </div>
 
+            <!-- Control Projects -->
             <div class="project-card">
                 <span class="project-title">Optimal Control Trajectory</span>
                 <p>Computed fuel/time-optimal trajectories using single shooting, multiple shooting, and direct collocation methods.</p>
@@ -388,6 +414,21 @@
         </div>
     </section>
 
+    <!-- SKILLS -->
+    <section>
+        <h2>Skills & Languages</h2>
+        <div class="skill-category">
+            <strong>Advanced:</strong> Python, MATLAB, LaTeX
+        </div>
+        <div class="skill-category">
+            <strong>Intermediate:</strong> ROS, Simulink, Git, C++
+        </div>
+        <div class="skill-category">
+            <strong>Languages:</strong> English (B2, IELTS 7/9), Turkish (Native)
+        </div>
+    </section>
+
+    <!-- VOLUNTEERING -->
     <section>
         <h2>Volunteer Experience</h2>
         <div class="job-block">
@@ -408,17 +449,9 @@
                 <li>Coordinated field setup for national and international exhibitors under ITU Dean’s Office.</li>
             </ul>
         </div>
-        <div class="job-block">
-            <div class="block-header">
-                <span class="role">Participant (Work & Travel USA)</span>
-                <span class="date">Jun 2022 - Sep 2022</span>
-            </div>
-            <ul>
-                <li>Engaged in a three-month cultural exchange program in Virginia Beach, VA.</li>
-            </ul>
-        </div>
     </section>
 
+    <!-- CERTIFICATIONS & HOBBIES -->
     <section>
         <h2>Certifications</h2>
         <ul>
