@@ -47,7 +47,7 @@
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 0; /* Reset padding for banner effect */
+            padding: 0;
             background: var(--white);
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
             min-height: 100vh;
@@ -65,10 +65,10 @@
         .profile-photo {
             width: 160px;
             height: 160px;
-            border-radius: 50%; /* Makes it round */
-            object-fit: cover; /* Prevents stretching */
+            border-radius: 50%;
+            object-fit: cover;
             border: 5px solid var(--white);
-            box-shadow: 0 0 0 3px var(--primary-color), 0 10px 20px rgba(0,0,0,0.1); /* Double border effect */
+            box-shadow: 0 0 0 3px var(--primary-color), 0 10px 20px rgba(0,0,0,0.1);
             margin-bottom: 20px;
             display: block;
             margin-left: auto;
@@ -271,7 +271,7 @@
 
     <!-- HEADER -->
     <header>
-        <!-- PROFILE PHOTO ADDED HERE -->
+        <!-- PROFILE PHOTO -->
         <img src="profile.jpg" alt="Abdulbaki Sanlan" class="profile-photo" onerror="this.style.display='none'">
         
         <h1>Abdulbaki Sanlan</h1>
@@ -280,6 +280,7 @@
             <span><i class="fas fa-envelope"></i> <a href="mailto:sanlan19@itu.edu.tr">sanlan19@itu.edu.tr</a></span>
             <span><i class="fas fa-phone"></i> +90 505 693 4357</span>
             <span><i class="fab fa-github"></i> <a href="https://github.com/bakisanlan">bakisanlan</a></span>
+            <span><i class="fas fa-birthday-cake"></i> 21.02.2001</span>
         </div>
 
         <!-- DOWNLOAD CV BUTTON -->
@@ -493,21 +494,30 @@
         </div>
     </section>
 
-    <!-- CERTIFICATIONS & HOBBIES -->
-    <section>
-        <h2>Certifications</h2>
-        <ul>
-            <li>Python Advanced Programming (Udemy), Jan 2022</li>
-            <li>Exercising Leadership: Foundational Principles (edX), Apr 2022</li>
-            <li>PLM Education Certificate (TUSAŞ), May 2022</li>
-            <li>Python for Data Science & ML (Udemy), Aug 2022</li>
-            <li>Practical AI with Python & RL (Udemy), Sep 2022</li>
-        </ul>
-    </section>
-    
+    <!-- HOBBIES -->
     <section>
         <h2>Hobbies</h2>
-        <p>Soccer, Computer Games, Reading Recent Aerospace Research</p>
+        <p>Soccer, Computer Games, Ice Skating</p>
+    </section>
+
+    <!-- REFERENCES -->
+    <section>
+        <h2>References</h2>
+        <div class="job-block">
+            <p><strong>Prof. Dr. İbrahim Özkol</strong><br>
+            Istanbul Technical University<br>
+            <a href="mailto:ozkol@itu.edu.tr">ozkol@itu.edu.tr</a></p>
+        </div>
+        <div class="job-block">
+            <p><strong>Assoc. Prof. Dr. Emre Koyuncu</strong><br>
+            Istanbul Technical University<br>
+            <a href="mailto:emre.koyuncu@itu.edu.tr">emre.koyuncu@itu.edu.tr</a></p>
+        </div>
+        <div class="job-block">
+            <p><strong>Dr. Murad Abu-Khalaf</strong><br>
+            Turkish Aerospace Industries (TF-X Executive Vice President)<br>
+            <a href="mailto:murad.abu-khalaf@tai.com.tr">murad.abu-khalaf@tai.com.tr</a></p>
+        </div>
     </section>
 
     <footer>
