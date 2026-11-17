@@ -241,6 +241,91 @@
             margin-bottom: 20px;
         }
 
+        /* --- Publications --- */
+        h3.pub-subhead {
+            font-size: 1.05rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 10px 0 15px;
+        }
+
+        .pub-block p {
+            margin-bottom: 6px;
+        }
+
+        .pub-title {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .pub-authors {
+            color: var(--text-light);
+        }
+
+        .pub-authors .me {
+            color: var(--text-dark);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .pub-venue {
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            font-style: normal;
+            padding: 2px 9px;
+            border-radius: 12px;
+            margin-left: 6px;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .badge-review   { background: #fff4e0; color: #8a5a00; border: 1px solid #f0d199; }
+        .badge-accepted { background: #e6f4ea; color: #1e6b34; border: 1px solid #b7dfc3; }
+        .badge-award    { background: #e8f0fa; color: var(--primary-color); border: 1px solid #b9cfe8; }
+
+        .pub-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .pub-btn {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 3px 12px;
+            border: 1px solid var(--primary-color);
+            border-radius: 15px;
+            color: var(--primary-color);
+        }
+
+        .pub-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .pub-btn i {
+            margin-right: 5px;
+        }
+
+        .pub-note {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 8px;
+            padding: 8px 12px;
+            background: var(--bg-light);
+            border-left: 3px solid var(--border-color);
+        }
+
         /* --- Footer --- */
         footer {
             text-align: center;
@@ -280,6 +365,7 @@
             <span><i class="fas fa-envelope"></i> <a href="mailto:sanlan19@itu.edu.tr">sanlan19@itu.edu.tr</a></span>
             <span><i class="fas fa-phone"></i> +90 505 693 4357</span>
             <span><i class="fab fa-github"></i> <a href="https://github.com/bakisanlan">bakisanlan</a></span>
+            <span><i class="fab fa-orcid"></i> <a href="https://orcid.org/0009-0008-1179-7453">0009-0008-1179-7453</a></span>
             <span><i class="fas fa-birthday-cake"></i> 21.02.2001</span>
         </div>
 
@@ -292,7 +378,7 @@
     <!-- SUMMARY -->
     <section>
         <h2>Summary</h2>
-        <p>Currently pursuing a PhD in Aerospace Engineering at Istanbul Technical University and conducting research at the ITU Aerospace Research Center. Experienced in the design and implementation of advanced GNC algorithms for aerospace applications, with a strong focus on developing and applying novel approaches to improve the autonomy, precision, and robustness of aerial systems.</p>
+        <p>Currently conducting research at the ITU Aerospace Research Center at Istanbul Technical University. Experienced in the design and implementation of guidance, navigation, and control (GNC) algorithms for aerospace applications, with a focus on developing and applying methods to improve the autonomy, precision, and robustness of aerial systems.</p>
     </section>
 
     <!-- EDUCATION -->
@@ -303,7 +389,7 @@
                 <span class="role">M.Sc. in Aerospace Engineering</span>
                 <span class="date">2024 -- 2025</span>
             </div>
-            <span class="company">Istanbul Technical University</span>
+            <span class="company">Istanbul Technical University, Istanbul, Turkey</span>
             <p>GPA: 3.78/4.00</p>
         </div>
 
@@ -312,23 +398,88 @@
                 <span class="role">B.Sc. in Aeronautical Engineering</span>
                 <span class="date">2019 -- 2024</span>
             </div>
-            <span class="company">Istanbul Technical University</span>
+            <span class="company">Istanbul Technical University, Istanbul, Turkey</span>
             <p>GPA: 3.36/4.00</p>
         </div>
     </section>
 
-    <!-- PUBLICATIONS (Video Included) -->
+    <!-- PUBLICATIONS -->
     <section>
         <h2>Publications</h2>
-        
-        <!-- Paper 1 + Video -->
+
+        <h3 class="pub-subhead">Journal Articles</h3>
+
+        <!-- TAES (under review) - manuscript hosted on this site -->
         <div class="pub-block">
             <p>
-                <a href="https://doi.org/10.1109/ICNS65417.2025.10976891">
-                    <strong>"Particle Filter-Based Localization Using Visual Feature Synchronization in GNSS-Denied Navigation"</strong>
+                <span class="pub-title">"Observability Analysis of Point Cloud-Based Terrain-Aided Navigation"</span><br>
+                <span class="pub-authors"><span class="me">A. Sanlan</span>, F. Erol, M. Demir, M. Abu-Khalaf, E. Koyuncu</span><br>
+                <span class="pub-venue">IEEE Transactions on Aerospace and Electronic Systems, 2026</span>
+                <span class="badge badge-review">Under Review</span>
+            </p>
+            <div class="pub-links">
+                <a class="pub-btn" href="ObsPaper_rev.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i>Manuscript (PDF)</a>
+            </div>
+            <div class="pub-note">
+                This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible.
+            </div>
+        </div>
+
+        <!-- T-RO (under review) -->
+        <div class="pub-block">
+            <p>
+                <span class="pub-title">"TANGO-VIO: Triangulation-Aware Navigation with Guaranteed Feature-Observability for Visual-Inertial Odometry"</span><br>
+                <span class="pub-authors"><span class="me">A. Şanlan</span>, E. C. Altunkaya, H. T. Bağcı, E. Koyuncu, İ. Özkol</span><br>
+                <span class="pub-venue">IEEE Transactions on Robotics, 2026</span>
+                <span class="badge badge-review">Under Review</span>
+            </p>
+            <div class="pub-links">
+                <a class="pub-btn" href="https://arxiv.org/abs/2608.02079" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i>arXiv</a>
+                <a class="pub-btn" href="https://tango-vio.github.io" target="_blank" rel="noopener"><i class="fas fa-globe"></i>Project Page</a>
+            </div>
+        </div>
+
+        <h3 class="pub-subhead">Conference Proceedings</h3>
+
+        <!-- SciTech 2027 -->
+        <div class="pub-block">
+            <p>
+                <span class="pub-title">"Terrain-Aided Navigation Without Raycasting: A Sliding Grid Approach for Point Cloud Processing"</span><br>
+                <span class="pub-authors"><span class="me">A. Sanlan</span>, F. Erol, M. Abu-Khalaf, E. Koyuncu</span><br>
+                <span class="pub-venue">AIAA SciTech Forum, 2027</span>
+                <span class="badge badge-accepted">Accepted</span>
+            </p>
+        </div>
+
+        <!-- IAC 2026 (1) -->
+        <div class="pub-block">
+            <p>
+                <span class="pub-title">"Robust LEO Attitude Determination via Sun–Horizon Fusion Using Factor Graph Optimization"</span><br>
+                <span class="pub-authors">S. B. Çınar, <span class="me">A. Sanlan</span>, E. C. Altunkaya, E. Koyuncu, İ. Özkol</span><br>
+                <span class="pub-venue">International Astronautical Congress (IAC), 2026</span>
+                <span class="badge badge-accepted">Accepted</span>
+            </p>
+        </div>
+
+        <!-- IAC 2026 (2) -->
+        <div class="pub-block">
+            <p>
+                <span class="pub-title">"Fuel-Efficient Control Barrier Function-Embedded Model Predictive Control for Autonomous Spacecraft Rendezvous and Docking"</span><br>
+                <span class="pub-authors">S. B. Çınar, <span class="me">A. Sanlan</span>, E. C. Altunkaya, E. Koyuncu, İ. Özkol</span><br>
+                <span class="pub-venue">International Astronautical Congress (IAC), 2026</span>
+                <span class="badge badge-accepted">Accepted</span>
+            </p>
+        </div>
+
+        <!-- ICNS 2025 + Video -->
+        <div class="pub-block">
+            <p>
+                <a href="https://doi.org/10.1109/ICNS65417.2025.10976891" target="_blank" rel="noopener">
+                    <span class="pub-title" style="color: var(--primary-color);">"Particle Filter-Based Localization Using Visual Feature Synchronization in GNSS-Denied Navigation"</span>
                 </a><br>
-                A.B. Sanlan, H. T. Bagci, E. Koyuncu<br>
-                <em>The 25th Integrated Communications, Navigation and Surveillance Conference, Brussels (2025)</em>
+                <span class="pub-authors"><span class="me">A. Sanlan</span>, H. T. Bagci, E. Koyuncu</span><br>
+                <span class="pub-venue">The 25th Integrated Communications, Navigation and Surveillance Conference (ICNS), Brussels, Belgium, 2025</span>
+                <span class="badge badge-award"><i class="fas fa-trophy"></i> Best Session Paper Award</span>
             </p>
 
             <!-- VIDEO EMBED -->
@@ -346,14 +497,14 @@
             </div>
         </div>
 
-        <!-- Paper 2 -->
+        <!-- arXiv 2025 -->
         <div class="pub-block">
             <p>
-                <a href="https://arxiv.org/abs/2510.06470">
-                    <strong>"Terrain-Aided Navigation Using a Point Cloud Measurement Sensor"</strong>
+                <a href="https://arxiv.org/abs/2510.06470" target="_blank" rel="noopener">
+                    <span class="pub-title" style="color: var(--primary-color);">"Terrain-Aided Navigation Using a Point Cloud Measurement Sensor"</span>
                 </a><br>
-                A.B. Sanlan, F. Erol, M. Abu-Khalaf, E. Koyuncu<br>
-                <em>arXiv e-prints, abs/2510.06470 (2025)</em>
+                <span class="pub-authors"><span class="me">A. Sanlan</span>, F. Erol, M. Abu-Khalaf, E. Koyuncu</span><br>
+                <span class="pub-venue">arXiv e-prints, abs/2510.06470, 2025</span>
             </p>
         </div>
     </section>
@@ -367,17 +518,23 @@
                 <span class="role">Researcher</span>
                 <span class="date">Nov 2023 -- Present</span>
             </div>
-            <span class="company">ITU Aerospace Research Center</span>
+            <span class="company">ITU Aerospace Research Center, Istanbul, Turkey</span>
             <ul>
+                <li><strong>Estimator Design for Drone-to-Drone Engagement:</strong>
+                    <ul>
+                        <li>Developed a <strong>Kalman Filter-based sensor fusion framework</strong> combining raw pixel measurements with radar measurements for robust state estimation.</li>
+                        <li>Implemented a <strong>Visual-Inertial Odometry (VIO)</strong> algorithm for localization of a highly maneuvering interceptor drone.</li>
+                    </ul>
+                </li>
                 <li><strong>GPS/GNSS Denied Navigation:</strong>
                     <ul>
-                        <li>Implemented a <strong>terrain-matching solution</strong> for 6-DOF aircraft state estimation by fusing INS data and point-cloud measurements through UKF and Particle Filter.</li>
-                        <li>Developed a <strong>visual navigation-based UAV positioning pipeline</strong> integrating VIO with Generative AI–enabled domain adaptation of satellite imagery.</li>
+                        <li>Implemented a <strong>terrain-matching solution</strong> for 6-DOF aircraft state estimation by fusing INS data and point-cloud measurements through the Unscented Kalman Filter (UKF) and Particle Filter (PF).</li>
+                        <li>Developed a <strong>visual navigation-based UAV positioning pipeline</strong> that integrates VIO with Generative AI (GANs)–enabled domain adaptation of satellite imagery matching within a Particle Filter framework.</li>
                     </ul>
                 </li>
                 <li><strong>Anti-Skid Braking System Design:</strong>
                     <ul>
-                        <li>Developed an <strong>optimal friction curve estimation</strong> model using PSO, integrating a hybrid approach with a Sliding Mode Estimator.</li>
+                        <li>Developed an <strong>optimal friction curve estimation</strong> model using Particle Swarm Optimization (PSO), integrating a hybrid approach with a Sliding Mode Estimator (SME) for enhanced performance.</li>
                         <li>Conducted research on <strong>effective radius estimation</strong> for systems operating under measurement-deficient conditions.</li>
                     </ul>
                 </li>
@@ -389,7 +546,7 @@
                 <span class="role">Engineer Intern</span>
                 <span class="date">Jul 2023 -- Sep 2023</span>
             </div>
-            <span class="company">Baykar Teknoloji</span>
+            <span class="company">Baykar Teknoloji, Istanbul, Turkey</span>
             <ul>
                 <li>Worked on swarm UAV formation flight algorithms based on Artificial Potential Field.</li>
             </ul>
@@ -400,10 +557,23 @@
                 <span class="role">Engineer Intern</span>
                 <span class="date">Oct 2022 -- Mar 2023</span>
             </div>
-            <span class="company">TUSAŞ (Turkish Aerospace Industries)</span>
+            <span class="company">TUSAŞ (Turkish Aerospace Industries), Istanbul, Turkey</span>
             <ul>
                 <li>Assisted in trim and linearization for a 6-DOF Aircraft model.</li>
                 <li>Learned visualization of aircraft model on Simulink/Flight Gear.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section>
+        <h2>Teaching Assistant</h2>
+        <div class="job-block">
+            <span class="company">Istanbul Technical University, Istanbul, Turkey</span>
+            <ul>
+                <li>Introduction and Application to Guidance and Navigation</li>
+                <li>Robotic Control Systems</li>
+                <li>Advanced Flight Dynamics</li>
             </ul>
         </div>
     </section>
@@ -419,29 +589,33 @@
             </div>
             <div class="project-card">
                 <span class="project-title">Audio Species ID</span>
-                <p>Developed a deep learning pipeline for automated species identification using audio recordings and signal processing.</p>
+                <p>Developed a deep learning pipeline for automated species identification using audio recordings, leveraging signal processing and neural network techniques.</p>
             </div>
             <div class="project-card">
                 <span class="project-title">Segment Anything (SAM)</span>
-                <p>Implemented a grounded image-classification framework built on SAM to enhance segmentation precision.</p>
+                <p>Implemented a grounded image-classification framework built on SAM to enhance segmentation precision and object recognition accuracy.</p>
             </div>
 
             <!-- Control Projects -->
             <div class="project-card">
                 <span class="project-title">Optimal Control Trajectory</span>
-                <p>Computed fuel/time-optimal trajectories using single shooting, multiple shooting, and direct collocation methods.</p>
+                <p>Computed minimum-fuel and minimum-time trajectories for a commercial aircraft using single shooting, multiple shooting, and direct collocation methods.</p>
             </div>
             <div class="project-card">
                 <span class="project-title">Reinforcement Learning</span>
-                <p>Implemented RL for obstacle avoidance and optimal path planning for commercial aircraft in 2D environments.</p>
+                <p>Used RL to find minimum-fuel and minimum-time trajectories for a commercial aircraft, and obstacle-avoiding paths to a target in a 2D environment.</p>
             </div>
             <div class="project-card">
                 <span class="project-title">Dynamic Programming Combat</span>
-                <p>Modeled 1v1 3D air combat scenarios and developed sub-optimal dogfighting algorithms using Approximate Dynamic Programming.</p>
+                <p>Modeled 1v1 3D air combat scenarios and developed sub-optimal dogfighting algorithms using Approximate Dynamic Programming under real-time computational constraints.</p>
             </div>
             <div class="project-card">
                 <span class="project-title">F-16 LQR/LQI Control</span>
                 <p>Designed controllers for the F-16 model (Aerobench-vv) using MATLAB/Simulink.</p>
+            </div>
+            <div class="project-card">
+                <span class="project-title">Inverted Pendulum RL Control</span>
+                <p>Implemented reinforcement learning–based control for an inverted pendulum system.</p>
             </div>
         </div>
     </section>
@@ -450,13 +624,35 @@
     <section>
         <h2>Skills & Languages</h2>
         <div class="skill-category">
-            <strong>Advanced:</strong> Python, MATLAB, LaTeX
+            <strong>Programming & Software:</strong> Python, MATLAB/Simulink, Git, C++, ROS1/ROS2, LaTeX, ArduPilot, Gazebo
         </div>
         <div class="skill-category">
-            <strong>Intermediate:</strong> ROS, Simulink, Git, C++
+            <strong>Hardware:</strong> Small UAV Platforms, Pixhawk, NVIDIA Jetson
         </div>
         <div class="skill-category">
-            <strong>Languages:</strong> English (B2, IELTS 7/9), Turkish (Native)
+            <strong>Languages:</strong> English (C1, IELTS 7/9), Turkish (Native)
+        </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section>
+        <h2>Awards & Achievements</h2>
+        <div class="job-block">
+            <div class="block-header">
+                <span class="role">Best Session Paper Award – ICNS</span>
+                <span class="date">2025</span>
+            </div>
+            <ul>
+                <li>Awarded in the AI-Enabled Data Generation session at the 25th Integrated Communications, Navigation and Surveillance Conference.</li>
+            </ul>
+        </div>
+        <div class="job-block">
+            <div class="block-header">
+                <span class="role">National University Entrance Examination, Turkey</span>
+            </div>
+            <ul>
+                <li>Ranked 4,756th among approximately 2.5 million candidates nationwide.</li>
+            </ul>
         </div>
     </section>
 
@@ -465,16 +661,16 @@
         <h2>Volunteer Experience</h2>
         <div class="job-block">
             <div class="block-header">
-                <span class="role">Software Team Lead (ITU SKY)</span>
-                <span class="date">Sep 2022 - Apr 2024</span>
+                <span class="role">Software Team Lead (ITU SKY University UAV Team)</span>
+                <span class="date">Sep 2022 -- Apr 2024</span>
             </div>
             <ul>
-                <li>Developed mission planning and object detection tracking, designing custom PID controllers for TEKNOFEST-2024.</li>
+                <li>Developed and led mission planning, used image processing for object detection and tracking, and designed custom PID controllers for TEKNOFEST-2024.</li>
             </ul>
         </div>
         <div class="job-block">
             <div class="block-header">
-                <span class="role">Organizational Coordinator (SAHA EXPO)</span>
+                <span class="role">Organizational Coordinator (SAHA EXPO 2022)</span>
                 <span class="date">Sep 2022</span>
             </div>
             <ul>
@@ -509,19 +705,19 @@
             <a href="mailto:ozkol@itu.edu.tr">ozkol@itu.edu.tr</a></p>
         </div>
         <div class="job-block">
-            <p><strong>Assoc. Prof. Dr. Emre Koyuncu</strong><br>
+            <p><strong>Prof. Dr. Emre Koyuncu</strong><br>
             Istanbul Technical University<br>
             <a href="mailto:emre.koyuncu@itu.edu.tr">emre.koyuncu@itu.edu.tr</a></p>
         </div>
         <div class="job-block">
             <p><strong>Dr. Murad Abu-Khalaf</strong><br>
-            Turkish Aerospace Industries (Specialist)<br>
-            <a href="mailto:murad.abu-khalaf@tai.com.tr">murad.abu-khalaf@tai.com.tr</a></p>
+            Turkish Aerospace Industries<br>
+            <a href="mailto:murad@csail.mit.edu">murad@csail.mit.edu</a></p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Abdulbaki Sanlan. Hosted on GitHub Pages.</p>
+        <p>&copy; 2026 Abdulbaki Sanlan. Last updated: November 2026. Hosted on GitHub Pages.</p>
     </footer>
 
 </div>
